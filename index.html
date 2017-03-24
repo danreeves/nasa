@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NASA</title>
+    <link href="https://fonts.googleapis.com/css?family=Exo+2:700" rel="stylesheet">
+    <style>{{ css }}</style>
+</head>
+<body>
+    <div class="logo">
+        <div class="stars stars-1"></div>
+        <div class="stars stars-2"></div>
+        <div class="stars stars-3"></div>
+        <div class="swooshes">
+            <span class="swoosh swoosh-1"></span>
+            <span class="swoosh swoosh-2"></span>
+            <span class="swoosh swoosh-3"></span>
+            <span class="swoosh swoosh-4"></span>
+        </div>
+        <h1 class="text">{{ name }}</h1>
+        <div class="orbit-outer">
+            <div class="orbit-wrapper">
+                <div class="orbit"></div>
+            </div>
+        </div>
+        <form method="POST">
+            <input name="txt" placeholder="{{ name }}" />
+            <button type="submit">Go! 🚀</button>
+        </form>
+    </div>
+    <script>
+        document.documentElement.classList.add('js');
+
+        var input = document.querySelector('input[name="txt"]');
+        var output = document.querySelector('.text');
+        var prevValue = '';
+
+        history.replaceState({ text: input.placeholder }, '', window.location.pathname);
+
+        window.onpopstate = function (event) {
+            var state = event.state || {};
+            var newText = state.text || input.placeholder;
+            output.textContent = newText;
+            input.value = newText;
+        }
+
+        input.oninput = function (event) {
+            var newText = event.target.value || event.target.placeholder;
+            output.textContent = newText;
+            if (!prevValue) {
+                history.pushState({ text: newText }, '', newText);
+            } else if (event.target.value && event.target.value > prevValue) {
+                history.replaceState({ text: newText }, '', newText);
+            }
+            prevValue = event.target.value;
+        }
+    </script>
+</body>
+</html>

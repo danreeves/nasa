@@ -1,0 +1,15 @@
+{
+  "name": "nasa",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "micro index.js"
+  },
+  "author": "",
+  "dependencies": {
+    "he": "^1.1.1",
+    "micro": "^7.2.1",
+    "node-sass": "^4.5.1",
+    "normalize-uri": "^1.1.0",
+    "urlencoded-body-parser": "^2.0.0"
+  }
+}
