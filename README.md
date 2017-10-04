@@ -1,10 +1,12 @@
 # Make your very own NASA logo 🚀
 
-[nasa.glitch.me](https://nasa.glitch.me)
+Visit: [nasa.glitch.me](https://nasa.glitch.me)
 
-[Tom Hazeldine](https://codepen.io/tomhazledine/pen/dvKZLg) <- css wizard 🎩
+## Made by
 
-[Dan Reeves](https://twitter.com/dnrvs) <- code monkey 🙈
+🎩 CSS Wizard: [Tom Hazeldine](https://twitter.com/thomashazledine)
+
+🙈 Code Monkey: [Dan Reeves](https://twitter.com/dnrvs)
 
 ---
 
